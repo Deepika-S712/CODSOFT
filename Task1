@@ -1,0 +1,59 @@
+print("ChatBot: Hello!")
+print("ChatBot: Type 'bye' to exit.\n")
+
+while True:
+
+    user = input("You: ").lower()
+
+    # Greeting
+    if user == "hi" or user == "hello":
+        print("ChatBot: Hello! How can I help you?")
+
+    # Name
+    elif "who are you" in user:
+        print("ChatBot: My name is RuleBot.")
+
+    # Health
+    elif "how are you" in user:
+        print("ChatBot: I am fine!")
+
+    # Courses
+    elif "course" in user:
+        print("ChatBot: We offer Python, Java, AI, and Web Development.")
+
+    # Time
+    elif "time" in user:
+        from datetime import datetime
+        current = datetime.now().strftime("%H:%M:%S")
+        print("ChatBot: Current time is", current)
+
+    # Thank you
+    elif "thanks" in user or "thank you" in user:
+        print("ChatBot: You're welcome!")
+
+    elif "where are you from" in user:
+        print("ChatBot: I am from the Python world!")
+
+    elif "can you help me" in user:
+        print("ChatBot: Yes! I will try my best to help you.")
+
+    elif "who created you" in user:
+        print("ChatBot: I was created using Python programming.")
+
+    elif "what is python" in user:
+        print("ChatBot: Python is a popular programming language.")
+
+    elif "tell me a joke" in user:
+        print("ChatBot: Why do programmers prefer dark mode? Because light attracts bugs!")
+
+    elif "what is ai" in user:
+        print("ChatBot: AI stands for Artificial Intelligence.")
+
+    # Exit
+    elif user == "bye":
+        print("ChatBot: Goodbye!")
+        break
+
+    # Unknown
+    else:
+        print("ChatBot: Sorry, I don't understand.")
